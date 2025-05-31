@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 
 import EstudianteView from '../views/EstudianteView.vue'
 import EstudianteTablaView from '../views/EstudianteTablaView.vue'
+import MotoView from '../views/MotoView.vue'
 
 const routes = [
   {
@@ -20,6 +21,11 @@ const routes = [
     path: '/Estudiante/tabla',
     name: 'EstudianteTablaView',
     component: EstudianteTablaView
+  },
+   {
+    path: '/Moto',
+    name: 'MotoView',
+    component: MotoView
   },
   {
     path: '/ContadorView',
