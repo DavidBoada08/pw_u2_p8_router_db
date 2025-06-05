@@ -18,10 +18,8 @@
     <button v-on:click="agregarEstudiante()">Agregar</button>
     <div>
       <button v-on:click="obtenerPathVariable()">Obtener</button>
-
     </div>
-    
-    
+
     <ul>
       <!-- <li v-for="estu in lista" :key="estu.nombre"> Nombre: {{ estu.nombre }} - Apellido: {{ estu.apellido }}</li> -->
       <li
@@ -106,15 +104,15 @@ export default {
       this.lista.unshift(nuevo);
       // this.lista.push(nuevo);
     },
-    obtenerPathVariable(){
-       const apellido = this.$route.params.apellido;
+    obtenerPathVariable() {
+      const apellido = this.$route.params.apellido;
       console.log("Apellido: " + apellido);
 
       const anio = this.$route.query.anio;
       console.log("Año: " + anio);
       const mes = this.$route.query.mes;
       console.log("Mes: " + mes);
-    }
+    },
   },
 };
 </script>
