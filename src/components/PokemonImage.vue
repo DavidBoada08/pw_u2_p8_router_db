@@ -1,32 +1,33 @@
 <template>
-  <!-- <h1>Pokemon Image</h1> -->
-  <div class="container-image">
+  <div class="image-container">
+    <!-- objetivo: mostrar una imagen -->
     <img
       v-if="!mostrar"
       class="ocultar"
-      :src="imagenfuente"
-      alt="No se puede renderizar la imagen del pokemon"
+      :src="imagenFuente"
+      alt="No se puede renderizar la imagen del pokemón"
     />
+ 
     <img
       v-if="mostrar"
-      :src="imagenfuente"
-      alt="No se puede renderizar la imagen del pokemon"
+      v-bind:src="imagenFuente"
+      alt="No se puede renderizar la imagen del pokemón"
     />
   </div>
 </template>
-
+ 
 <script>
 export default {
   props: {
     pokemonId: {
-      type: Number,
-      required: true,
+        type: Number,
+        required: true
     },
     mostrarImagen: {
-      type: Boolean,
-      default: false,
-      required: false,
-    },
+        type:Boolean,
+        required: true,
+        default: false
+    }
   },
   data() {
     return {
@@ -34,29 +35,27 @@ export default {
     };
   },
   computed: {
-    imagenfuente(){
-      return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${this.pokemonId}.svg`
-    }
+    imagenFuente() {
+      return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${this.pokemonId}.svg`;
+    },
   },
 };
 </script>
-
-<style>
-.container-image {
-  height: 200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
+ 
+<style scoped>
 img {
   height: 200px;
-  margin: 0;
-  display: block;
-  position: static; /* Elimina el posicionamiento absoluto */
+  /* atras de la imagen con la clase ocultar */
+  position: absolute;
+  right: 42%;
 }
+ 
 .ocultar {
   filter: brightness(0);
 }
+ 
+.image-container {
+  height: 200px;
+}
 </style>
+ 
