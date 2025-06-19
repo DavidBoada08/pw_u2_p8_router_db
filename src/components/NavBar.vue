@@ -9,6 +9,7 @@
       <router-link to="/HolaMundoVue">HolaMundoVue</router-link> |
        <router-link to="/Moto">Moto</router-link> |
       <router-link to="/pokemon">Pokemon</router-link> |
+      <router-link to="/responsivo">Responsivo</router-link> |
     </nav>
    
   

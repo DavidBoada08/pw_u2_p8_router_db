@@ -5,6 +5,7 @@ import EstudianteView from '../views/EstudianteView.vue'
 import EstudianteTablaView from '../views/EstudianteTablaView.vue'
 import MotoView from '../views/MotoView.vue'
 import PokemonView from '../views/PokemonView.vue'
+import ResponsivoView from '../views/ResponsivoView.vue'
 
 const routes = [
   {
@@ -32,6 +33,11 @@ const routes = [
     path: '/pokemon',
     name: 'PokemonView',
     component: PokemonView
+  },
+  {
+    path: '/responsivo',
+    name: 'ResponsivoView',
+    component: ResponsivoView
   },
   {
     path: '/ContadorView',
